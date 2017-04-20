@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Backgrounds & borders</title>
+
+<style>
+body{
+	background: #1e7797;
+	font-family: verdana, arial, sans-serif;
+}
+
+h1{
+	color: #fff;
+}
+
+.awesome-box{
+	border-radius: .7em;
+	background: #fff url('images/br.png') no-repeat bottom right;
+	background-size: 5em;
+	background-position: bottom 10px right 10px;
+	padding: 2em;
+	color: #1e7797;
+	width: 50%;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+/*solution using the background-origin that will chane the value of the box that the image will be relative to */
+.dos{
+	background: #fff url('images/br.png') no-repeat bottom right;
+	background-size: 4em;
+	background-origin: content-box;
+}
+
+/*solution using calc() function to calculate the ofset based on the 100% of the box dimensions*/
+.three{
+	background: #fff url('images/br.png') no-repeat;
+	background-size: 4em;
+	background-position: calc(100% - 5px) calc(100% - 10px);
+}
+</style>
+</head>
+<body>
+<h1>Background & borders</h1>
+<div class="awesome-box">
+	<p>Hello World</p>
+	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+</div>
+
+<div class="awesome-box dos">
+	<p>Hello World</p>
+	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+</div>
+
+<div class="awesome-box three">
+	<p>Hello World</p>
+	<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+</div>
+
+</body>
+</html>

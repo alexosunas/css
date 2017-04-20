@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DRY</title>
+
+<style>
+body{
+	font-size: 16px;
+	color: #207bbc;
+	font-family: verdana, sans-serif;
+}
+button{
+	padding: .3em .8em;
+	border: 1px solid rgba(0,0,0,.1);
+	background: #58a linear-gradient(hsla(0,0%,100%,.2), transparent);
+	border-radius: .2em;
+	box-shadow: 0 .05em .25em gray;
+	color:  white;
+	text-shadow: 0 -.05em .05em #335166;
+	font-size: 125%;
+	line-height: 1.5;
+}
+button.cancel{
+	background-color: #ce2a11;
+}
+button.ok{
+	background-color: #4cae12;
+}
+hr{
+	height: .25em;
+	background: currentColor;
+}
+a{
+	border: 1px solid;
+	color: currentColor;
+}
+
+input, select{
+	font-family: inherit;
+}
+.callout{
+	position: relative;
+	display: inline;
+}
+.callout:hover:before{
+	content: attr(title);
+	position: absolute;
+	top: 1em;
+	left: .25em;
+	padding: .35em;
+	background: aqua;
+	border: inherit;
+	transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+<h1>Hello Moto</h1>
+<button>Yes!</button>
+<button class="cancel">Cancel</button>
+<button class="ok">Ok</button>
+
+<p class="main-text">This is my test to the variable currentColor <a title="This is a tooltip" class="callout" href="#">Link Text</a><hr/></p>
+<label for="test">your name</label>
+<input class="callout" title="This is a tooltip" id="test" type="text" name="test" value="hello" />
+<select>please
+	<option>test 1</option>
+	<option>test 2</option>
+</select>
+
+</body>
+</html>

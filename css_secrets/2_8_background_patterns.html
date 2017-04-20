@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Patterns</title>
+
+<style>
+  div{
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .tablecloth{
+    background: white;
+    /* use the lienar gradient to set half of the image to semi transparent red and the other half fully transparent */
+    /* This is applyed for veritcal (90deg) and horizontal (default) */
+    background-image: linear-gradient(90deg,
+                        rgba(200,0,0,.5) 50%, transparent 0),
+                      linear-gradient(
+                        rgba(200,0,0,.5) 50%, transparent 0);
+    background-size: 30px 30px;
+  }
+  .grid-lines{
+    background: #58a;
+    /* Same case as .tablecloth but to create a grid  */
+    background-image:
+      linear-gradient(90deg, white 1px, transparent 0),
+      linear-gradient(white 1px, transparent 0);
+    background-size: 30px 30px;
+  }
+
+  .blueprint{
+    background: #58a;
+    background-image:
+      linear-gradient(white 2px, transparent 0), /* first two lines are to create the white large lines */
+      linear-gradient(90deg, white 2px, transparent 0),
+      linear-gradient(hsla(0,0%,100%,.3) 1px, transparent 0),
+      linear-gradient(90deg, hsla(0,0%,100%,.3) 1px, transparent 0);
+    background-size: 75px 75px, 75px 75px, /* this give size to the large lines */
+                      15px 15px, 15px 15px;
+  }
+</style>
+</head>
+<body>
+<h1>Background Patterns</h1>
+<div class="tablecloth"></div>
+<div class="grid-lines"></div>
+<div class="blueprint"></div>
+
+</body>
+</html>

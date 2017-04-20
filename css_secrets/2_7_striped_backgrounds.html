@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<header>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Striped Backgrounds</title>
+  <style type="text/css">
+    .bicolor{
+      /* use the 50% to create a defined gradient no shading, just jump from one color to the other*/
+      background: linear-gradient(#fb3 50%, #58a 50%);
+      width: 50%;
+      height: 100px;
+      margin: auto;
+      margin-bottom: 10px;
+    }
+
+    .stripe{
+      /* use background size to reduce the size of the gradient image and create some stripes*/
+      background-size: 100% 50px;
+    }
+
+    .unequal{
+      /*Adjust the percentage to 30% (or any other value) to have unequal heigth stripes */
+      /* If the second stop value is set to 0 the browser will take the value of the first stop
+        (this case 30%). This meke the code more DRY */
+      background: linear-gradient(#fb3 30%, #58a 0);
+      background-size: 100% 50px;
+    }
+
+    .three-color{
+      /* Add a second pair of gradient values to add a third color to the container. */
+      background: linear-gradient(#fb3 33.3%, #58a 0, #58a 66%, yellowgreen 0);
+      background-size: 100% 50px;
+    }
+
+    .vertical{
+      /* Add property "to right" (or 90deg) to make the orientation of the gradient change to horizontal*/
+      background: linear-gradient(to right, #fb3 50%, #58a 0);
+      background-size: 25% 100%;
+    }
+
+    .diagonal{
+      /* set the gradient rotation to 45deg in order to have diagonal stripes */
+      /* Create a gradient image that can be replicated to create a striped background */
+      /* If a background-repeat: space; is added you can see the images created to make the effect happen. */
+      background: linear-gradient(45deg,
+                    #fb3 25%, #58a 0, #58a 50%,
+                    #fb3 0, #fb3 75%, #58a 0);
+      background-size: 42.4px 42.4px;
+    }
+
+    .repeating{
+      /* use the "repeating" property that helps to simplify the code */
+      /* This technique also allow you to chenge the degres (in this case to 60) */
+      background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+    }
+
+    .combined{
+      /* if the angle will be 45 deg then we can combine the two techniques. */
+      background: repeating-linear-gradient(45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+      background-size: 42.4px 42.4px;
+    }
+
+    .ligther-variant{
+      /* When working with similar colors apply semi-transparent white color to reduce the tone of the darkest color. */
+      background: #58a;
+      background-image: repeating-linear-gradient(30deg, hsla(0,0%,100%,.1), hsla(0,0%,100%,.1) 15px, transparent 0, transparent 30px);
+    }
+  </style>
+</header>
+<body>
+	<div class="bicolor"></div>
+  <div class="bicolor stripe"></div>
+  <div class="bicolor unequal"></div>
+  <div class="bicolor three-color"></div>
+  <div class="bicolor vertical"></div>
+  <div class="bicolor diagonal"></div>
+  <div class="bicolor repeating"></div>
+  <div class="bicolor combined"></div>
+  <div class="bicolor ligther-variant"></div>
+</body>
+</html>

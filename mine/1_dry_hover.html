@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DRY</title>
+<style type="text/css">
+  .box{
+    background: blue linear-gradient(#fb3 50%, #58a 50%) no-repeat;
+    background-size: 100% 90%;
+    position: relative;
+    width: 50%;
+    height: 100px;
+  }
+
+  .box .circle{
+    background-color: inherit; /* currentColor; */
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    right: 50%;
+  }
+
+  .box:hover{
+    background-color: green;
+  }
+</style>
+</head>
+<body>
+<div class="box">
+<div class="circle"></div>
+</div>
+
+</body>
+</html>
