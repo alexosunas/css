@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Patterns</title>
+
+<style>
+  div{
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  /*The "radial-gradient" value for "background-image" property allow us to create circular patterns. In this case we set the color and the size of the circle as first parammeter. As a second parammeter the "transparent" value will make the background color visible and by setting "0" for the size value to start the second color, it will take the first circle size (30%) as default value.*/
+  .radial{
+    background: #655;
+    background-image: radial-gradient(tan 30%, transparent 0);
+    background-size: 30px 30px;
+  }
+
+
+  /*By adding a second value to "background-image" we can create a more complex pattern. Now we have to add a background position, for the first image "0 0" is the default position and "15px 15px" is the position of the secong one (to move it half of the size of the backgound image and crete that polka dot style).*/
+  .ploka-dot{
+    background: #21191E;
+    background-image: radial-gradient(tan 30%, transparent 0),
+                      radial-gradient(#d22b39 30%, transparent 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+
+    /*To create a Checkerboard style we will need to create four triangle images that will face each other in pairs. The "linear-gradient" value will create the triangles by setting:<br/>
+    the inclination of the image (45deg)<br/>
+    The first color and the length that color will fill in the image (#bbb 25%)<br/>
+    The second color and the length that color will fill in the image (transparent 0)<br/>
+    As mentioned before by setting "0" it will take the length to start the value set on the first length as default, in this case (25%).*/
+  .checkerboards1{
+    background: #eee;
+    background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+                      linear-gradient(45deg, transparent 75%, #bbb 0),
+                      linear-gradient(45deg, #bbb 25%, transparent 0),
+                      linear-gradient(45deg, transparent 75%, #bbb 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px,
+                        15px 15px, 30px 30px;
+  }
+
+  /*The previous code could be simplified by setting two of the triangles in the same image. also we can set a semi-transparent dark color (rgba(0,0,0,.25)) to the triangles, this will allow us to modify only the base color (#9e7a7a) and still have the effect.*/
+  .checkerboards2{
+    background: #9e7a7a;
+    background-image: linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0, transparent 75%, rgba(0,0,0,.25) 0),
+                      linear-gradient(45deg, rgba(0,0,0,.25) 25%, transparent 0, transparent 75%, rgba(0,0,0,.25) 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+  }
+
+  .checkerboards3{
+    background: #7A92A1 url('data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill-opacity=".25">\
+                              <rect x="50" width="50" height="50"/>\
+                              <rect y="50" width="50" height="50"/>\
+                            </svg>');
+    background-size: 30px 30px;
+  }
+</style>
+</head>
+<body>
+<h1>Background Patterns</h1>
+  <div class="radial"></div>
+  <div class="ploka-dot"></div>
+  <div class="checkerboards1"></div>
+  <div class="checkerboards2"></div>
+  <div class="checkerboards3"></div>
+  <div class="checkerboards4"></div>
+</body>
+</html>
