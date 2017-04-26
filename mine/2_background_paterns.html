@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DRY</title>
+<style type="text/css">
+  div{
+    width: 50%;
+    height: 90px;
+    margin: 10px auto;
+  }
+
+  .x-pattern{
+    background: #eee;
+    background-image: linear-gradient(45deg, transparent 33.33%, rgba(216, 6, 6,.3) 0, rgba(216, 6, 6,.3) 66.66%, transparent 0),
+                      linear-gradient(135deg, transparent 33.33%, rgba(216, 6, 6,.3) 0, rgba(216, 6, 6,.3) 66.66%, transparent 0),
+                      linear-gradient(45deg, rgba(216, 6, 6,.3) 16.66%, transparent 0, transparent 83.34%, rgba(216, 6, 6,.3) 0),
+                      linear-gradient(135deg, rgba(216, 6, 6,.3) 16.66%, transparent 0, transparent 83.34%, rgba(216, 6, 6,.3) 0);
+    background-size: 30px 30px;
+    /*background-repeat: no-repeat;*/
+  }
+
+  .x-pattern2{
+    background: #eee;
+    background-image: linear-gradient(45deg, transparent 37.5%, rgba(216, 6, 6,.3) 0, rgba(216, 6, 6,.3) 62.5%, transparent 0),
+                      linear-gradient(135deg, transparent 37.5%, rgba(216, 6, 6,.3) 0, rgba(216, 6, 6,.3) 62.5%, transparent 0),
+                      linear-gradient(45deg, rgba(216, 6, 6,.3) 12.5%, transparent 0, transparent 87.5%, rgba(216, 6, 6,.3) 0),
+                      linear-gradient(135deg, rgba(216, 6, 6,.3) 12.5%, transparent 0, transparent 87.5%, rgba(216, 6, 6,.3) 0);
+    background-size: 30px 30px;
+    /*background-repeat: no-repeat;*/
+  }
+</style>
+</head>
+<body>
+<div class="x-pattern"></div>
+<div class="x-pattern2"></div>
+</body>
+</html>
