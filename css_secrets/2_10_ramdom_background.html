@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background Patterns</title>
+
+<style>
+  div{
+    width: 50%;
+    height: 100px;
+    margin: auto;
+    margin-bottom: 10px;
+  }
+
+  .random{
+    background: linear-gradient(90deg, #fb3 15%, #655 0, #655 40%, #ab4 0, #ab4 65%, hsl(20, 40%, 90%) 0);
+    background-size: 80px 100%;
+  }
+
+  .random2{
+    background: hsl(20, 40%, 90%);
+    background-image:
+      linear-gradient(90deg, #fb3 10px, transparent 0),
+      linear-gradient(90deg, #ab4 20px, transparent 0),
+      linear-gradient(90deg, #655 20px, transparent 0);
+    background-size: 80px 100%, 60px 100%, 40px, 100%;
+  }
+</style>
+</head>
+<body>
+<h1>(pseudo) Random Background Patterns</h1>
+  <div class="random"></div>
+  <div class="random2"></div>
+</body>
+</html>
